@@ -36,8 +36,8 @@ change requests to api using cloudscraper, for this you must first install it by
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/jawikas/banana-bot.git
-   cd banana-bot
+   git clone https://github.com/nadirasaid8/banahub.git
+   cd banahub
    
 Create and activate a virtual environment:
 
