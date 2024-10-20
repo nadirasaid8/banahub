@@ -1,0 +1,8 @@
+{
+    "use_proxy": false,
+    "auto_sell": false,
+    "sell_all_banana": false,
+    "auto_speedup": false,
+    "auto_task": false,
+    "delay_account": 5
+}
