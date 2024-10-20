@@ -2,7 +2,7 @@
 
 This repository contains a Python script designed to automate interactions with the B4n4n4 API provided by Carv. The script logs into multiple accounts, performs various actions like clicking, claiming lotteries, equipping bananas, selling them, and speeding up processes based on the configurations set in `config.json`.
 
-[TELEGRAM CHANNEL](https://t.me/Deeplchain) | [TWITTER](https://x.com/itsjaw_real)
+[TELEGRAM CHANNEL](https://t.me/Deeplchain) | [CONTACT](https://t.me/imspecials)
 
 ## Registrations
  - Open and start [ [B4N4N4 BOT](https://t.me/OfficialBananaBot/banana?startapp=referral=4FA3K91) ]
@@ -114,4 +114,4 @@ The script will start processing each account listed in data.txt, performing all
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
-For any questions or issues, please open an issue on GitHub or contact me at [ https://t.me/deeplchainsup ]
+For any questions or issues, please open an issue on GitHub or contact me at [ https://t.me/deeplchain ]
