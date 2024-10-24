@@ -1,3 +1,5 @@
+from src.agent import generate_random_user_agent
+
 def headers():
     return {
             'Accept': 'application/json, text/plain, */*',
@@ -9,6 +11,7 @@ def headers():
             'sec-fetch-mode': 'cors',
             'priority': 'u=1, i',
             'sec-fetch-site': 'same-site',
+            'User-Agent': generate_random_user_agent(),
             'x-app-id': 'carv'
         }
     

@@ -4,5 +4,6 @@
     "sell_all_banana": false,
     "auto_speedup": false,
     "auto_task": false,
-    "delay_account": 5
+    "delay_account": 5,
+    "countdown_loop": 3800
 }

@@ -38,6 +38,7 @@ class TokenManager:
 
     def get_tokens(self, user_id):
         return self.tokens.get(user_id, [])
+    
 class Banana:
     def __init__(self):
         self.base_url = "https://interface.carv.io/banana"
@@ -62,20 +63,15 @@ class Banana:
 
     def load_proxies(self):
         proxies = []
-        try:
-            with open('proxies.txt', 'r') as file:
-                lines = file.readlines()
-                for line in lines:
-                    proxy = line.strip()
-                    proxies.append({
-                        'http': f'http://{proxy}', 
-                        'https': f'http://{proxy}',
-                    })
-            return proxies
-        except Exception as e:
-            log(mrh + f"Something wrong with your proxy!")
-            log_error(f"{str(e)}")
-            return proxies
+        with open('proxies.txt', 'r') as file:
+            lines = file.readlines()
+            for line in lines:
+                proxy = line.strip()
+                proxies.append({
+                    'http': f'http://{proxy}', 
+                    'https': f'http://{proxy}',
+                })
+        return proxies
 
     def login(self, query):
         user_id = self.extract_user_id(query)
@@ -93,11 +89,7 @@ class Banana:
             return proxy
         return None
 
-    def set_random_user_agent(self):
-        self.headers['User-Agent'] = generate_random_user_agent()
-
     def _post(self, endpoint, payload):
-        self.set_random_user_agent()
         response = self.scraper.post(
             url=f"{self.base_url}/{endpoint}",
             headers=self.headers,
@@ -109,7 +101,6 @@ class Banana:
         return response.json()
 
     def _get(self, endpoint):
-        self.set_random_user_agent()
         response = self.scraper.get(
             url=f"{self.base_url}/{endpoint}",
             headers=self.headers,
@@ -212,8 +203,9 @@ class Banana:
             
             remain_lottery_count = data.get('remain_lottery_count', 0)
             log(f"{hju}Remaining lottery count: {pth}{remain_lottery_count}")
+            if remain_lottery_count > 0:
+                self.claim_ads_income(token)
 
-            self.claim_ads_income(token)
             countdown_timer(3)
         else:
             log(f"{mrh}{response.get('msg', '')}")

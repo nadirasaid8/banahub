@@ -1,4 +1,4 @@
-# B4n4n4 Script for B4n4n4 by C4rv Protocol (FORCE RUN)
+# B4n4n4 Script for B4n4n4 by C4rv Protocol (FORCE RUN v1)
 
 This repository contains a Python script designed to automate interactions with the B4n4n4 API provided by Carv. The script logs into multiple accounts, performs various actions like clicking, claiming lotteries, equipping bananas, selling them, and speeding up processes based on the configurations set in `config.json`.
 
@@ -57,10 +57,11 @@ Create a config.json file in the root directory with the following structure:
 {
     "use_proxy": false,
     "auto_sell": false,
+    "sell_all_banana": false,
     "auto_speedup": false,
     "auto_task": false,
     "delay_account": 5,
-    "cycle_delay": 3800
+    "countdown_loop": 3800
 }
    ```
 `use_proxy`: Enable it with `true` to activate proxy usage 

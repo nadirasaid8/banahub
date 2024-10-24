@@ -45,7 +45,7 @@ def _banner():
  ██║   ██║   ███████║╚█████╔╝██║  ██║╚███╔███╔╝
  ╚═╝   ╚═╝   ╚══════╝ ╚════╝ ╚═╝  ╚═╝ ╚══╝╚══╝  """ 
     print(Fore.GREEN + Style.BRIGHT + banner + Style.RESET_ALL)
-    print(hju + f" Banana by Carv Bot {mrh}Force Run Version")
+    print(hju + f" Banana by Carv Bot {mrh}Force Run Version 2")
     print(mrh + f" FREE TO USE = Join us on {pth}t.me/DEEPLCHAIN")
     print(mrh + f" before start please '{hju}git pull{mrh}' to update bot")
     print(f"{pth}~" * 60)
